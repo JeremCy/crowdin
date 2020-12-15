@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+
+    {{ form_widget(form.firstName, {attr: {
+        'class': 'maclasse'
+    }}) }}
+
+    {% if hasError(form.firstName) %}
+        <p>{{ form.firstName|error_first }}</p>
+    {% endif %}
+
+  
+
+    {{ form_end(form) }}
+{% endblock %}
