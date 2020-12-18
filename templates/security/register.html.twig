@@ -1,17 +1,38 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+  <div class="container">
+{% form_theme form 'bootstrap_4_horizontal_layout.html.twig' %}
     {{ form_start(form) }}
-
-    {{ form_widget(form.firstName, {attr: {
-        'class': 'maclasse'
-    }}) }}
+    <div class="form-group">
+    {{ form_label(form.firstName, 'First name') }}
+    {{ form_widget(form.firstName) }}
 
     {% if hasError(form.firstName) %}
         <p>{{ form.firstName|error_first }}</p>
-    {% endif %}
+    {% endif %}</div>
+    <div class="form-group">
+        {{ form_label(form.lastName, 'Last name') }}
+      {{ form_widget(form.lastName) }}
 
-  
+    {% if hasError(form.lastName) %}
+        <p>{{ form.lastName|error_first }}</p>
+    {% endif %}</div>
+    <div class="form-group">
+        {{ form_label(form.email, 'Email') }}
+        {{ form_widget(form.email) }}
 
+    {% if hasError(form.email) %}
+        <p>{{ form.email|error_first }}</p>
+    {% endif %}</div>
+    <div class="form-group">
+        {{ form_label(form.password, 'Passworld') }}
+        {{ form_widget(form.password) }}
+
+    {% if hasError(form.password) %}
+        <p>{{ form.password|error_first }}</p>
+    {% endif %}</div>
+{% block button %} {% endblock %}
+</div>
     {{ form_end(form) }}
 {% endblock %}

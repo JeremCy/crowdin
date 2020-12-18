@@ -1,0 +1,12 @@
+
+html,div,body{
+    background-color: rgb(36, 39, 41)!important;
+    color: white;
+}
+.container, .row{
+    background-color: rgb(58, 64, 66)  ;
+    color: white;
+}
+label{
+    color: white;
+}
