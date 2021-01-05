@@ -11,7 +11,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
- * @Route("/dashboard")
+ * @Route("/dashboard/{id}")
  * IsGranted("ROLE_USER")
  */
 class DashboardController extends AbstractController
@@ -19,7 +19,7 @@ class DashboardController extends AbstractController
     /**
      * @Route("", name="dashboard.index")
      */
-    public function index(Connection $connection): Response
+    public function index(int $id): Response
     {
         return $this->render('dashboard/index.html.twig');
     }

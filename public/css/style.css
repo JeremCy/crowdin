@@ -1,10 +1,9 @@
-
-html,div,body{
+body{
     background-color: rgb(36, 39, 41)!important;
     color: white;
 }
 .container, .row{
-    background-color: rgb(58, 64, 66)  ;
+    background-color: rgb(36, 39, 41);
     color: white;
 }
 label{

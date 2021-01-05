@@ -1,0 +1,10 @@
+body,html{
+    width: 100%;
+    background-image: url("https://www.vecteezy.com/vector-art/1266164-website-under-construction-background")!important;
+        /* Half height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
