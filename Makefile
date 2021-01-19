@@ -17,7 +17,7 @@ cert-install: ## Install the local HTTPS certificates
 	$(SYMFONY) server:ca:install
 
 serve: ## Serve the application with HTTPS support
-	$(SYMFONY) server:run
+	symfony serve 
 
 unserve: ## Stop the webserver
 	$(SYMFONY) server:stop

@@ -41,10 +41,10 @@ class SecurityController extends AbstractController
         $form = $this->createForm(UserForm::class, $user);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $user->setPassword($encoder->encodePassword($user, $user->getPassword()))
-                ->setRoles(['ROLE_USER']);
-
-            
+            $user->setPassword($encoder->encodePassword($user, $user->getPassword()));
+            $test= $this->getDoctrine()->getManager();
+            $test->persist($user);
+            $test->flush();
         }
 
         return $this->render('security/register.html.twig', [

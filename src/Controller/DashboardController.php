@@ -21,7 +21,6 @@ class DashboardController extends AbstractController
      */
     public function index(int $id): Response
     {
-        
         return $this->render('dashboard/index.html.twig');
     }
 }
