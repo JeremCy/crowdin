@@ -5,20 +5,6 @@
 {% form_theme form 'bootstrap_4_horizontal_layout.html.twig' %}
     {{ form_start(form) }}
     <div class="form-group">
-    {{ form_label(form.firstName, 'First name') }}
-    {{ form_widget(form.firstName) }}
-
-    {% if hasError(form.firstName) %}
-        <p>{{ form.firstName|error_first }}</p>
-    {% endif %}</div>
-    <div class="form-group">
-        {{ form_label(form.lastName, 'Last name') }}
-      {{ form_widget(form.lastName) }}
-
-    {% if hasError(form.lastName) %}
-        <p>{{ form.lastName|error_first }}</p>
-    {% endif %}</div>
-    <div class="form-group">
         {{ form_label(form.email, 'Email') }}
         {{ form_widget(form.email) }}
 

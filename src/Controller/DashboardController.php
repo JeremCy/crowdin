@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Repository\UserRepository;
 use Doctrine\DBAL\Driver\Connection;
 use Doctrine\ORM\EntityManagerInterface;
@@ -21,6 +22,7 @@ class DashboardController extends AbstractController
      */
     public function index(int $id): Response
     {
+        $user=$this->getDoctrine()->getRepository(User::class)->find($id);
         return $this->render('dashboard/index.html.twig');
     }
 }
