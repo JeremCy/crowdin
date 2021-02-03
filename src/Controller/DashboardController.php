@@ -20,9 +20,9 @@ class DashboardController extends AbstractController
     /**
      * @Route("", name="dashboard.index")
      */
-    public function index(int $id): Response
+    public function index( $id, UserRepository $userRepository): Response
     {
-        $user=$this->getDoctrine()->getRepository(User::class)->find($id);
+       $user=$userRepository->find($id);
         return $this->render('dashboard/index.html.twig');
     }
 }
